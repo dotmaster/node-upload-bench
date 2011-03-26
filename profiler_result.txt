@@ -1,0 +1,656 @@
+on my Macbook Pro I get the following result (throughtput 0.31 mb/sec and node running on 99% CPU) after a random time, where upload is really fast, e.g. until reaching 50% it suddenly slows down.
+Statistical profiling result from my.log, (365160 ticks, 273 unaccounted, 0 excluded).
+Nearly all ticks are in _si_cache_add_item!
+
+Statistical profiling result from my.log, (912076 ticks, 499 unaccounted, 0 excluded).
+
+ [Unknown]:
+   ticks  total  nonlib   name
+    499    0.1%
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    259    0.0%    0.0%  Function: MultipartParser.write /Users/dotmaster/workspace/iGoThere2/support/File.IO/node_modules/node-formidable/lib/formidable/multipart_parser.js:65
+    209    0.0%    0.0%  Function: Buffer.slice buffer.js:370
+    153    0.0%    0.0%  Function: IncomingForm.write /Users/dotmaster/workspace/iGoThere2/support/File.IO/node_modules/node-formidable/lib/formidable/incoming_form.js:112
+    124    0.0%    0.0%  Function: WriteStream.write fs.js:1049
+    124    0.0%    0.0%  Function: Socket._writeOut net.js:389
+     91    0.0%    0.0%  Stub: ToBoolean
+     89    0.0%    0.0%  Function: IncomingForm._initMultipart.parser.onPartData /Users/dotmaster/workspace/iGoThere2/support/File.IO/node_modules/node-formidable/lib/formidable/incoming_form.js:292
+     85    0.0%    0.0%  Function: EventEmitter.emit events.js:38
+     81    0.0%    0.0%  Function: Socket._onReadable net.js:613
+     80    0.0%    0.0%  Stub: ArgumentsAccess
+     78    0.0%    0.0%  Stub: CEntry
+     76    0.0%    0.0%  Stub: CompareStub_EQ_STRICT
+     69    0.0%    0.0%  Function: Buffer.write buffer.js:233
+     68    0.0%    0.0%  Function: WriteStream.flush fs.js:991
+     64    0.0%    0.0%  KeyedLoadIC: A keyed load IC from the snapshot
+     59    0.0%    0.0%  Function: File.write /Users/dotmaster/workspace/iGoThere2/support/File.IO/node_modules/node-formidable/lib/formidable/file.js:47
+     57    0.0%    0.0%  LazyCompile: IN native runtime.js:347
+     55    0.0%    0.0%  Stub: ExternalArrayStub
+     51    0.0%    0.0%  Function: Buffer buffer.js:126
+     49    0.0%    0.0%  Function: fs.write fs.js:268
+     49    0.0%    0.0%  Builtin: A builtin from the snapshot {5}
+     48    0.0%    0.0%  Function: MultipartParser.write.callback /Users/dotmaster/workspace/iGoThere2/support/File.IO/node_modules/node-formidable/lib/formidable/multipart_parser.js:88
+     45    0.0%    0.0%  LazyCompile: substr native string.js:648
+     43    0.0%    0.0%  Function: exports.print util.js:25
+     43    0.0%    0.0%  Builtin: A builtin from the snapshot {8}
+     42    0.0%    0.0%  CallMegamorphic: args_count: 2
+     42    0.0%    0.0%  Builtin: A builtin from the snapshot {3}
+     41    0.0%    0.0%  Function: WriteStream.flush fs.js:1008
+     41    0.0%    0.0%  Function: Socket.resume net.js:760
+     40    0.0%    0.0%  Function: parsers.FreeList.parser.onBody http.js:114
+     40    0.0%    0.0%  Function: <anonymous> /Users/dotmaster/workspace/iGoThere2/support/File.IO/test/server.js:37
+     38    0.0%    0.0%  Stub: StringAdd
+     37    0.0%    0.0%  LazyCompile: BasicJSONSerialize native json.js:268
+     37    0.0%    0.0%  Function: exports.active timers.js:129
+     36    0.0%    0.0%  Function: Module._load module.js:261
+     36    0.0%    0.0%  Builtin: A builtin from the snapshot {1}
+     35    0.0%    0.0%  Stub: FastNewClosure
+     35    0.0%    0.0%  Builtin: A builtin from the snapshot {4}
+     34    0.0%    0.0%  LazyCompile: BasicSerializeArray native json.js:181
+     34    0.0%    0.0%  Function: socket.ondata http.js:1000
+     32    0.0%    0.0%  Stub: CallFunction
+     31    0.0%    0.0%  Stub: StringAdd {1}
+     30    0.0%    0.0%  Stub: JSEntry
+     30    0.0%    0.0%  Function: remove _linklist.js:47
+     29    0.0%    0.0%  LazyCompile: WeekDays native date.js:398
+     27    0.0%    0.0%  Function: IncomingForm.parse.pause /Users/dotmaster/workspace/iGoThere2/support/File.IO/node_modules/node-formidable/lib/formidable/incoming_form.js:36
+     25    0.0%    0.0%  Stub: TypeRecordingBinaryOpStub_DIV_Alloc_Generic
+     25    0.0%    0.0%  Stub: FastNewContextStub {3}
+     25    0.0%    0.0%  Function: onReadable net.js:174
+     24    0.0%    0.0%  Stub: CallFunction {2}
+     24    0.0%    0.0%  KeyedCallMegamorphic: args_count: 3
+     24    0.0%    0.0%  Function: IncomingForm.handlePart /Users/dotmaster/workspace/iGoThere2/support/File.IO/node_modules/node-formidable/lib/formidable/incoming_form.js:177
+     23    0.0%    0.0%  Stub: NumberToString
+     23    0.0%    0.0%  Function: require module.js:347
+     22    0.0%    0.0%  LazyCompile: COMPARE native runtime.js:113
+     21    0.0%    0.0%  Stub: InstanceofStub
+     21    0.0%    0.0%  Stub: FastCloneShallowArrayStub
+     21    0.0%    0.0%  LazyCompile: DIV native runtime.js:223
+     21    0.0%    0.0%  Function: Socket.write net.js:294
+     21    0.0%    0.0%  Function: IncomingMessage.resume http.js:253
+     21    0.0%    0.0%  Builtin: A builtin from the snapshot {2}
+     20    0.0%    0.0%  Stub: SubString
+     20    0.0%    0.0%  Stub: FastNewContextStub {1}
+     19    0.0%    0.0%  Stub: CompareStub_EQ
+     19    0.0%    0.0%  Function: MultipartParser.write.dataCallback /Users/dotmaster/workspace/iGoThere2/support/File.IO/node_modules/node-formidable/lib/formidable/multipart_parser.js:98
+     19    0.0%    0.0%  Function: File.write /Users/dotmaster/workspace/iGoThere2/support/File.IO/node_modules/node-formidable/lib/formidable/file.js:45
+     18    0.0%    0.0%  LazyCompile: stringify native json.js:302
+     18    0.0%    0.0%  Function: Socket.pause net.js:755
+     18    0.0%    0.0%  Function: IncomingForm.parse.resume /Users/dotmaster/workspace/iGoThere2/support/File.IO/node_modules/node-formidable/lib/formidable/incoming_form.js:50
+     17    0.0%    0.0%  Stub: FastNewContextStub {2}
+     17    0.0%    0.0%  Stub: FastNewContextStub
+     17    0.0%    0.0%  Stub: CallFunction {3}
+     17    0.0%    0.0%  Function: IncomingForm.parse.fields /Users/dotmaster/workspace/iGoThere2/support/File.IO/node_modules/node-formidable/lib/formidable/incoming_form.js:72
+     17    0.0%    0.0%  Function: IncomingForm.handlePart /Users/dotmaster/workspace/iGoThere2/support/File.IO/node_modules/node-formidable/lib/formidable/incoming_form.js:179
+     16    0.0%    0.0%  Stub: CompareStub_GE
+     16    0.0%    0.0%  Stub: CallFunction {1}
+     16    0.0%    0.0%  Function: IncomingMessage.pause http.js:248
+     16    0.0%    0.0%  CallMegamorphic: args_count: 3 {1}
+     15    0.0%    0.0%  Stub: TypeRecordingBinaryOpStub_ADD_Alloc_Strings
+     15    0.0%    0.0%  LazyCompile: ToString native runtime.js:526
+     15    0.0%    0.0%  LazyCompile: INSTANCE_OF native runtime.js:359
+     15    0.0%    0.0%  LazyCompile: APPLY_PREPARE native runtime.js:416
+     15    0.0%    0.0%  Function: self._writeImpl net.js:152
+     15    0.0%    0.0%  Function: Module._resolveFilename module.js:306
+     14    0.0%    0.0%  LazyCompile: b native string.js:36
+     14    0.0%    0.0%  LazyCompile: NonNumberToNumber native runtime.js:514
+     14    0.0%    0.0%  Function: NativeModule.exists node.js:412
+     13    0.0%    0.0%  Stub: FastCloneShallowArray {2}
+     13    0.0%    0.0%  Function: self._readImpl net.js:162
+     12    0.0%    0.0%  Stub: TypeRecordingBinaryOpStub_SUB_Alloc_SMI
+     12    0.0%    0.0%  Stub: FastCloneShallowArray
+     11    0.0%    0.0%  Stub: TypeRecordingBinaryOpStub_ADD_Alloc_Generic
+     11    0.0%    0.0%  Stub: GenericBinaryOp
+     11    0.0%    0.0%  Stub: FastCloneShallowArray {1}
+     11    0.0%    0.0%  Function: NativeModule.require node.js:386
+     10    0.0%    0.0%  Stub: CompareIC {3}
+     10    0.0%    0.0%  KeyedStoreIC: A keyed store IC from the snapshot
+     10    0.0%    0.0%  Function: isBuffer buffer.js:204
+      9    0.0%    0.0%  Stub: CompareIC {1}
+      9    0.0%    0.0%  Function: append _linklist.js:63
+      8    0.0%    0.0%  Stub: Compare
+      7    0.0%    0.0%  Stub: TypeRecordingBinaryOpStub_ADD_Alloc_SMI
+      7    0.0%    0.0%  Stub: CompareIC {4}
+      7    0.0%    0.0%  LazyCompile: toUpperCase native string.js:700
+      7    0.0%    0.0%  LazyCompile: toLowerCase native string.js:688
+      6    0.0%    0.0%  Stub: FastNewContextStub {4}
+      6    0.0%    0.0%  Stub: FastNewContext
+      6    0.0%    0.0%  Builtin: A builtin from the snapshot
+      5    0.0%    0.0%  Stub: TypeRecordingBinaryOpStub_MUL_OverwriteLeft_HeapNumbers
+      5    0.0%    0.0%  Stub: FastNewContext {1}
+      5    0.0%    0.0%  Stub: CompareIC {5}
+      5    0.0%    0.0%  Stub: CompareIC {2}
+      5    0.0%    0.0%  LazyCompile: ToPrimitive native runtime.js:482
+      4    0.0%    0.0%  Stub: CompareIC
+      4    0.0%    0.0%  LazyCompile: isFinite native v8natives.js:85
+      4    0.0%    0.0%  LazyCompile: DELETE native runtime.js:341
+      4    0.0%    0.0%  KeyedLoadIC: A keyed load IC from the snapshot {1}
+      4    0.0%    0.0%  Builtin: A builtin from the snapshot {9}
+      4    0.0%    0.0%  Builtin: A builtin from the snapshot {6}
+      3    0.0%    0.0%  Stub: TypeRecordingBinaryOpStub_ADD_OverwriteLeft_Strings
+      3    0.0%    0.0%  Stub: CompareIC {6}
+      3    0.0%    0.0%  LazyCompile: ToObject native runtime.js:543
+      3    0.0%    0.0%  KeyedLoadIC:  {156}
+      3    0.0%    0.0%  Function: NativeModule.getCached node.js:408
+      2    0.0%    0.0%  Stub: CompareIC {7}
+      2    0.0%    0.0%  LazyCompile: ConfigureTemplateInstance native apinatives.js:93
+      2    0.0%    0.0%  KeyedLoadIC:  {148}
+      2    0.0%    0.0%  Function: debug net.js:34
+      2    0.0%    0.0%  Function: NativeModule.compile node.js:429
+      1    0.0%    0.0%  Stub: CallFunction {4}
+      1    0.0%    0.0%  LazyCompile: round native math.js:172
+      1    0.0%    0.0%  LazyCompile: PropertyDescriptor native v8natives.js:380
+      1    0.0%    0.0%  LazyCompile: DoConstructRegExp native regexp.js:35
+      1    0.0%    0.0%  KeyedLoadIC:  {164}
+      1    0.0%    0.0%  KeyedLoadIC:  {162}
+      1    0.0%    0.0%  KeyedLoadIC:  {161}
+      1    0.0%    0.0%  KeyedLoadIC:  {151}
+      1    0.0%    0.0%  KeyedLoadIC:  {147}
+      1    0.0%    0.0%  KeyedLoadIC:  {146}
+      1    0.0%    0.0%  KeyedLoadIC:  {145}
+      1    0.0%    0.0%  KeyedLoadIC:  {137}
+      1    0.0%    0.0%  KeyedLoadIC:  {120}
+      1    0.0%    0.0%  Function: isArrayIsh buffer.js:185
+      1    0.0%    0.0%  Function: allocNewPool net.js:101
+      1    0.0%    0.0%  Builtin: A builtin from the snapshot {7}
+
+ [C++]:
+   ticks  total  nonlib   name
+  887570   97.3%   97.3%  _si_cache_add_item
+   5781    0.6%    0.6%  ___private_getcwd
+   4648    0.5%    0.5%  __mh_dylib_header
+   1461    0.2%    0.2%  ___vfprintf
+    560    0.1%    0.1%  _szone_free
+    234    0.0%    0.0%  v8::internal::JSObject::LookupInDescriptor
+    220    0.0%    0.0%  _szone_malloc_should_clear
+    181    0.0%    0.0%  v8::internal::DescriptorArray::BinarySearch
+    181    0.0%    0.0%  _vproc_mig_look_up2
+    162    0.0%    0.0%  _ev_run
+    128    0.0%    0.0%  v8::internal::String::ToCString
+    128    0.0%    0.0%  v8::internal::JSObject::LocalLookup
+    122    0.0%    0.0%  v8::internal::JSObject::LocalLookupRealNamedProperty
+    114    0.0%    0.0%  v8::internal::StringDictionary::FindEntry
+     97    0.0%    0.0%  v8::internal::Object::GetProperty
+     95    0.0%    0.0%  v8::internal::Builtin_HandleApiCall
+     93    0.0%    0.0%  v8::internal::JSObject::HasElementWithReceiver
+     84    0.0%    0.0%  v8::internal::CallICBase::ReceiverToObjectIfRequired
+     78    0.0%    0.0%  v8::internal::LoadIC::Load
+     78    0.0%    0.0%  ___sflush
+     74    0.0%    0.0%  v8::internal::SweepSpace
+     71    0.0%    0.0%  v8::internal::Heap::Contains
+     71    0.0%    0.0%  _sysconf
+     68    0.0%    0.0%  _wcscoll_l
+     64    0.0%    0.0%  v8::internal::Logger::CodeCreateEvent
+     64    0.0%    0.0%  _bootstrap_look_up2
+     63    0.0%    0.0%  v8::internal::Object::Lookup
+     58    0.0%    0.0%  v8::internal::Invoke
+     58    0.0%    0.0%  _kqueue_poll
+     56    0.0%    0.0%  v8::internal::StubCompiler::CheckPrototypes
+     55    0.0%    0.0%  v8::internal::Runtime::GetObjectProperty
+     55    0.0%    0.0%  v8::internal::HashTable<v8::internal::NumberDictionaryShape, unsigned int>::FindEntry
+     54    0.0%    0.0%  v8::internal::LogMessageBuilder::Append
+     53    0.0%    0.0%  v8::internal::Runtime::SetObjectProperty
+     53    0.0%    0.0%  v8::internal::MarkCompactCollector::SweepSpaces
+     53    0.0%    0.0%  _mach_port_allocate
+     49    0.0%    0.0%  v8::internal::LoadIC::UpdateCaches
+     49    0.0%    0.0%  _create_scalable_zone
+     49    0.0%    0.0%  _CC_MD5_Update
+     47    0.0%    0.0%  v8::internal::String::ComputeAndSetHash
+     47    0.0%    0.0%  v8::internal::CodeCache::UpdateDefaultCache
+     46    0.0%    0.0%  v8::internal::String::SlowAsArrayIndex
+     45    0.0%    0.0%  v8::internal::StaticMarkingVisitor::VisitCode
+     45    0.0%    0.0%  v8::Value::ToObject
+     45    0.0%    0.0%  _http_parser_execute
+     44    0.0%    0.0%  v8::internal::Code::CopyFrom
+     41    0.0%    0.0%  v8::internal::RelocIterator::next
+     41    0.0%    0.0%  v8::internal::RelocInfoWriter::Write
+     40    0.0%    0.0%  v8::internal::StubCache::Set
+     40    0.0%    0.0%  _unw_get_reg
+     39    0.0%    0.0%  v8::internal::CallIC_Miss
+     39    0.0%    0.0%  v8::internal::Assembler::movq
+     39    0.0%    0.0%  v8::Function::Call
+     38    0.0%    0.0%  node::Write
+     37    0.0%    0.0%  v8::internal::CallICBase::LoadFunction
+     37    0.0%    0.0%  _tiny_malloc_from_free_list
+     37    0.0%    0.0%  _strcpy
+     36    0.0%    0.0%  v8::internal::String::SlowEquals
+     36    0.0%    0.0%  v8::internal::LoadIC_Miss
+     36    0.0%    0.0%  v8::internal::JSObject::UpdateMapCodeCache
+     36    0.0%    0.0%  _d_print_comp
+     35    0.0%    0.0%  v8::internal::StubCache::ComputeLoadField
+     35    0.0%    0.0%  v8::internal::StackFrameIterator::StackFrameIterator
+     35    0.0%    0.0%  v8::internal::Logger::ApiEntryCall
+     35    0.0%    0.0%  v8::internal::Heap::AllocateByteArray
+     35    0.0%    0.0%  v8::internal::DescriptorArray::RemoveTransitions
+     35    0.0%    0.0%  node::Check
+     35    0.0%    0.0%  __malloc_initialize
+     34    0.0%    0.0%  _extract_host
+     33    0.0%    0.0%  v8::internal::StubCache::ComputeCallConstant
+     33    0.0%    0.0%  v8::internal::Runtime_StringBuilderConcat
+     33    0.0%    0.0%  v8::internal::OS::IsOutsideAllocatedSpace
+     33    0.0%    0.0%  node::Parser::Execute
+     33    0.0%    0.0%  __pthread_mutex_init
+     32    0.0%    0.0%  v8::internal::Heap::AllocateFixedArray
+     32    0.0%    0.0%  v8::internal::Assembler::j
+     32    0.0%    0.0%  _ev_feed_event
+     31    0.0%    0.0%  v8::internal::Object::GetPrototype
+     31    0.0%    0.0%  v8::internal::JSObject::SetProperty
+     31    0.0%    0.0%  _d_print_function_type
+     30    0.0%    0.0%  v8::internal::SetProperty
+     30    0.0%    0.0%  v8::internal::LoadStubCompiler::CompileLoadField
+     30    0.0%    0.0%  v8::internal::JSObject::AddFastPropertyUsingMap
+     30    0.0%    0.0%  v8::internal::HasNormalObjectsInPrototypeChain
+     30    0.0%    0.0%  v8::internal::CallStubCompiler::CompileCallConstant
+     30    0.0%    0.0%  _pthread_mutex_lock
+     30    0.0%    0.0%  _parse_long_options
+     29    0.0%    0.0%  v8::internal::Runtime_KeyedGetProperty
+     29    0.0%    0.0%  v8::internal::Operand::Operand
+     29    0.0%    0.0%  v8::internal::Heap::CreateCode
+     28    0.0%    0.0%  v8::internal::StringInputBuffer::Seek
+     28    0.0%    0.0%  v8::internal::String::ComputeHashField
+     28    0.0%    0.0%  v8::Value::IsFunction
+     28    0.0%    0.0%  _allocate_pages
+     27    0.0%    0.0%  v8::internal::Logger::IntEvent
+     27    0.0%    0.0%  v8::internal::Heap::AllocateCodeCache
+     27    0.0%    0.0%  _szone_size
+     27    0.0%    0.0%  _ev_invoke_pending
+     27    0.0%    0.0%  _dyld_fast_stub_entry
+     27    0.0%    0.0%  _d_demangle
+     26    0.0%    0.0%  v8::internal::Runtime_StringToUpperCase
+     26    0.0%    0.0%  v8::internal::PcToCodeCache::GetCacheEntry
+     26    0.0%    0.0%  v8::internal::MacroAssembler::Cmp
+     26    0.0%    0.0%  v8::Value::Int32Value
+     26    0.0%    0.0%  unibrow::InputBuffer<v8::internal::String, v8::internal::String*, 1024u>::FillBuffer
+     25    0.0%    0.0%  v8::internal::Map::CreateBackPointers
+     24    0.0%    0.0%  v8::internal::StaticMarkingVisitor::VisitSharedFunctionInfoGeneric
+     24    0.0%    0.0%  v8::internal::Log::WriteToFile
+     24    0.0%    0.0%  v8::internal::Execution::InstantiateFunction
+     24    0.0%    0.0%  v8::internal::CallICBase::UpdateCaches
+     24    0.0%    0.0%  v8::Value::Uint32Value
+     24    0.0%    0.0%  _etp_submit
+     23    0.0%    0.0%  v8::internal::MarkCompactCollector::MarkDescriptorArray
+     23    0.0%    0.0%  v8::String::WriteUtf8
+     23    0.0%    0.0%  v8::HandleScope::HandleScope
+     23    0.0%    0.0%  _memset_pattern4
+     22    0.0%    0.0%  v8::internal::String::ReadBlockIntoBuffer
+     22    0.0%    0.0%  v8::internal::LookupForRead
+     22    0.0%    0.0%  v8::internal::Assembler::Assembler
+     22    0.0%    0.0%  _eio_poll
+     21    0.0%    0.0%  v8::internal::String::ReadBlock
+     21    0.0%    0.0%  v8::internal::StaticVisitorBase::GetVisitorId
+     21    0.0%    0.0%  v8::internal::Heap::AllocateMap
+     21    0.0%    0.0%  v8::internal::Builtin_ArrayShift
+     21    0.0%    0.0%  v8::Object::SetIndexedPropertiesToExternalArrayData
+     21    0.0%    0.0%  _open$NOCANCEL
+     21    0.0%    0.0%  _CC_MD5_Init
+     20    0.0%    0.0%  v8::internal::JSEntryStub::MinorKey
+     20    0.0%    0.0%  v8::internal::HandleScope::Extend
+     20    0.0%    0.0%  v8::Object::Set
+     19    0.0%    0.0%  v8::internal::Runtime_HasElement
+     19    0.0%    0.0%  v8::internal::Heap::AllocateRaw
+     19    0.0%    0.0%  v8::Undefined
+     19    0.0%    0.0%  v8::Integer::New
+     19    0.0%    0.0%  node::After
+     18    0.0%    0.0%  v8::internal::Map::FindInCodeCache
+     18    0.0%    0.0%  v8::internal::LogMessageBuilder::LogMessageBuilder
+     18    0.0%    0.0%  _szone_realloc
+     17    0.0%    0.0%  v8::internal::Map::IndexInCodeCache
+     17    0.0%    0.0%  v8::internal::CPU::FlushICache
+     17    0.0%    0.0%  v8::internal::Assembler::testb
+     17    0.0%    0.0%  v8::internal::Assembler::bind
+     17    0.0%    0.0%  v8::Value::ToString
+     17    0.0%    0.0%  v8::Object::GetIndexedPropertiesExternalArrayDataType
+     17    0.0%    0.0%  node::Buffer::MakeFastBuffer
+     17    0.0%    0.0%  _pipecb
+     17    0.0%    0.0%  _kqueue_modify
+     16    0.0%    0.0%  v8::internal::StaticMarkingVisitor::VisitUnmarkedObjects
+     16    0.0%    0.0%  v8::internal::StaticMarkingVisitor::VisitJSFunctionFields
+     16    0.0%    0.0%  v8::internal::OldSpaceFreeList::Allocate
+     16    0.0%    0.0%  v8::internal::OS::VSNPrintF
+     16    0.0%    0.0%  v8::internal::LogMessageBuilder::WriteToLogFile
+     16    0.0%    0.0%  v8::internal::LoadStubCompiler::GetCode
+     16    0.0%    0.0%  v8::internal::Heap::AllocateExternalArray
+     16    0.0%    0.0%  v8::internal::GlobalHandles::Create
+     16    0.0%    0.0%  v8::internal::FlexibleBodyVisitor<v8::internal::StaticMarkingVisitor, v8::internal::FixedArray::BodyDescriptor, void>::Visit
+     16    0.0%    0.0%  v8::internal::Factory::GetSlowElementsMap
+     16    0.0%    0.0%  v8::internal::Assembler::jmp
+     16    0.0%    0.0%  node::Buffer::Utf8Write
+     15    0.0%    0.0%  v8::internal::Runtime_RoundNumber
+     15    0.0%    0.0%  v8::internal::Object::GetPropertyWithReceiver
+     15    0.0%    0.0%  v8::internal::Heap::AllocateRawFixedArray
+     15    0.0%    0.0%  v8::internal::CallICBase::ComputeMonomorphicStub
+     15    0.0%    0.0%  v8::internal::Builtin_ArrayUnshift
+     15    0.0%    0.0%  node::IOWatcher::Stop
+     14    0.0%    0.0%  v8::internal::StubCompiler::GenerateFastPropertyLoad
+     14    0.0%    0.0%  v8::internal::MacroAssembler::MacroAssembler
+     14    0.0%    0.0%  v8::internal::MacroAssembler::InvokeCode
+     14    0.0%    0.0%  v8::internal::KeyedCallIC_Miss
+     14    0.0%    0.0%  v8::HandleScope::~HandleScope
+     14    0.0%    0.0%  node::IOWatcher::Callback
+     14    0.0%    0.0%  _malloc_zone_malloc
+     14    0.0%    0.0%  _dlsym
+     13    0.0%    0.0%  v8::internal::RelocIterator::RelocIterator
+     13    0.0%    0.0%  v8::internal::OldSpace::SlowAllocateRaw
+     13    0.0%    0.0%  v8::internal::Heap::NumberFromDouble
+     13    0.0%    0.0%  v8::internal::FixedSpace::SlowAllocateRaw
+     13    0.0%    0.0%  v8::internal::Factory::NewExternalArray
+     13    0.0%    0.0%  v8::internal::CallOptimization::CallOptimization
+     13    0.0%    0.0%  v8::internal::Assembler::~Assembler
+     13    0.0%    0.0%  v8::True
+     13    0.0%    0.0%  v8::Object::GetIndexedPropertiesExternalArrayData
+     13    0.0%    0.0%  dyldGlobalLockInitialize
+     13    0.0%    0.0%  ___guard_setup
+     12    0.0%    0.0%  v8::internal::MacroAssembler::InvokeFunction
+     12    0.0%    0.0%  v8::internal::Logger::HandleEvent
+     12    0.0%    0.0%  v8::internal::Logger::DeleteEventInternal
+     12    0.0%    0.0%  v8::internal::GlobalHandles::MakeWeak
+     12    0.0%    0.0%  node::Read
+     12    0.0%    0.0%  node::Parser::on_body
+     12    0.0%    0.0%  node::IOWatcher::Set
+     12    0.0%    0.0%  _openlog
+     12    0.0%    0.0%  _mig_strncpy
+     12    0.0%    0.0%  _atexit_register
+     11    0.0%    0.0%  v8::internal::Runtime_StringToNumber
+     11    0.0%    0.0%  v8::internal::OS::TimeCurrentMillis
+     11    0.0%    0.0%  v8::internal::Map::CopyDropTransitions
+     11    0.0%    0.0%  v8::internal::Builtin_ArrayPush
+     11    0.0%    0.0%  v8::Value::IsBoolean
+     11    0.0%    0.0%  v8::FunctionTemplate::GetFunction
+     11    0.0%    0.0%  v8::False
+     11    0.0%    0.0%  _pthread_mutex_unlock
+     11    0.0%    0.0%  _ev_io_start
+     11    0.0%    0.0%  _eio_write
+     11    0.0%    0.0%  _acos$fenv_access_off
+     10    0.0%    0.0%  v8::internal::UpdatingVisitor::VisitPointers
+     10    0.0%    0.0%  v8::internal::SymbolTableCleaner::VisitPointers
+     10    0.0%    0.0%  v8::internal::ScavengingVisitor::EvacuateFixedArray
+     10    0.0%    0.0%  v8::internal::MacroAssembler::InvokePrologue<v8::internal::NearLabel>
+     10    0.0%    0.0%  v8::internal::MacOSMutex::Lock
+     10    0.0%    0.0%  v8::internal::Logger::SuspectReadEvent
+     10    0.0%    0.0%  v8::internal::JSObject::GetElementWithReceiver
+     10    0.0%    0.0%  v8::internal::JSEntryStub::MajorKey
+     10    0.0%    0.0%  v8::internal::Assembler::ret
+     10    0.0%    0.0%  v8::Value::IsObject
+     10    0.0%    0.0%  v8::Value::IsInt32
+     10    0.0%    0.0%  v8::TryCatch::~TryCatch
+     10    0.0%    0.0%  v8::HandleScope::CreateHandle
+     10    0.0%    0.0%  _notify_register_plain
+     10    0.0%    0.0%  _memchr
+     10    0.0%    0.0%  _ev_io_stop
+     10    0.0%    0.0%  ___mult_D2A
+      9    0.0%    0.0%  v8::internal::Top::SetCurrentVMState
+      9    0.0%    0.0%  v8::internal::String::WriteToFlat<char>
+      9    0.0%    0.0%  v8::internal::Runtime_HasProperty
+      9    0.0%    0.0%  v8::internal::Object::GetElementWithReceiver
+      9    0.0%    0.0%  v8::internal::KeyedLoadIC::Load
+      9    0.0%    0.0%  v8::internal::JSObject::GetPropertyAttributeWithReceiver
+      9    0.0%    0.0%  v8::internal::Heap::AllocateRawAsciiString
+      9    0.0%    0.0%  v8::internal::Execution::Call
+      9    0.0%    0.0%  node::Buffer::HasInstance
+      9    0.0%    0.0%  _realpath$DARWIN_EXTSN
+      9    0.0%    0.0%  _pthread_mutexattr_destroy
+      9    0.0%    0.0%  _malloc_zone_calloc
+      8    0.0%    0.0%  v8::internal::StackFrameIterator::AdvanceWithHandler
+      8    0.0%    0.0%  v8::internal::StackFrame::GetCallerState
+      8    0.0%    0.0%  v8::internal::Runtime_DateCurrentTime
+      8    0.0%    0.0%  v8::internal::RootMarkingVisitor::VisitPointer
+      8    0.0%    0.0%  v8::internal::Map::CopyDropDescriptors
+      8    0.0%    0.0%  v8::internal::Logger::ApiObjectAccess
+      8    0.0%    0.0%  v8::Object::GetIndexedPropertiesExternalArrayDataLength
+      8    0.0%    0.0%  v8::Object::Get
+      8    0.0%    0.0%  v8::Null
+      8    0.0%    0.0%  v8::HandleScope::RawClose
+      8    0.0%    0.0%  libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_x86_64>::validReg
+      8    0.0%    0.0%  __notify_server_register_plain
+      7    0.0%    0.0%  v8::internal::UpdatePointerToNewGen
+      7    0.0%    0.0%  v8::internal::MacOSMutex::Unlock
+      7    0.0%    0.0%  v8::internal::KeyedLookupCache::Lookup
+      7    0.0%    0.0%  v8::internal::JavaScriptScanner::Scan
+      7    0.0%    0.0%  v8::internal::JSObject::GetPropertyAttribute
+      7    0.0%    0.0%  v8::internal::Heap::ScavengePointer
+      7    0.0%    0.0%  v8::internal::Heap::IteratePointersInDirtyRegion
+      7    0.0%    0.0%  v8::internal::Heap::AllocateFixedArrayWithHoles
+      7    0.0%    0.0%  v8::internal::HandleScopeImplementer::instance
+      7    0.0%    0.0%  v8::internal::GetProperty
+      7    0.0%    0.0%  v8::internal::ExitFrame::ComputeCallerState
+      7    0.0%    0.0%  v8::internal::CodeStub::GetCode
+      7    0.0%    0.0%  v8::internal::Assembler::arithmetic_op
+      7    0.0%    0.0%  v8::V8::ClearWeak
+      7    0.0%    0.0%  v8::TryCatch::TryCatch
+      7    0.0%    0.0%  _vm_protect
+      7    0.0%    0.0%  _mag_lock_zine_for_region_trailer
+      7    0.0%    0.0%  _eio_finish
+      7    0.0%    0.0%  _OSAtomicAnd32OrigBarrier
+      6    0.0%    0.0%  v8::internal::Runtime_StringToLowerCase
+      6    0.0%    0.0%  v8::internal::MarkCompactCollector::CreateBackPointers
+      6    0.0%    0.0%  v8::internal::MacroAssembler::CheckSmi
+      6    0.0%    0.0%  v8::internal::KeyedCallIC::LoadFunction
+      6    0.0%    0.0%  v8::internal::JavaScriptFrame::type
+      6    0.0%    0.0%  v8::internal::GlobalHandles::ClearWeakness
+      6    0.0%    0.0%  v8::internal::ExitFrame::ComputeStackPointer
+      6    0.0%    0.0%  v8::internal::Context::global_proxy
+      6    0.0%    0.0%  unibrow::InputBuffer<v8::internal::String, v8::internal::String*, 1024u>::Rewind
+      6    0.0%    0.0%  node::Tick
+      6    0.0%    0.0%  node::ObjectWrap::Unref
+      6    0.0%    0.0%  _read$NOCANCEL
+      6    0.0%    0.0%  _malloc_zone_register_while_locked
+      6    0.0%    0.0%  _free
+      6    0.0%    0.0%  ___lshift_D2A
+      5    0.0%    0.0%  v8::internal::Top::global_context
+      5    0.0%    0.0%  v8::internal::Top::RegisterTryCatchHandler
+      5    0.0%    0.0%  v8::internal::StubCache::ComputeCallMiss
+      5    0.0%    0.0%  v8::internal::MarkCompactCollector::MarkUnmarkedObject
+      5    0.0%    0.0%  v8::internal::MarkCompactCollector::MarkMapContents
+      5    0.0%    0.0%  v8::internal::Malloced::New
+      5    0.0%    0.0%  v8::internal::MacroAssembler::IncrementCounter
+      5    0.0%    0.0%  v8::internal::Label::pos
+      5    0.0%    0.0%  v8::internal::JSObject::SetFastElement
+      5    0.0%    0.0%  v8::internal::GlobalHandles::Destroy
+      5    0.0%    0.0%  v8::internal::FixedBodyVisitor<v8::internal::StaticMarkingVisitor, v8::internal::FixedBodyDescriptor<24, 40, 40>, void>::Visit
+      5    0.0%    0.0%  v8::internal::Context::global_context
+      5    0.0%    0.0%  v8::internal::CodeCache::Update
+      5    0.0%    0.0%  v8::Value::IsTrue
+      5    0.0%    0.0%  node::PrepareTick
+      5    0.0%    0.0%  node::ObjectWrap::Ref
+      5    0.0%    0.0%  _thread_policy
+      5    0.0%    0.0%  _OSAtomicDequeue
+      5    0.0%    0.0%  _DNSServiceConstructFullName
+      4    0.0%    0.0%  v8::internal::TryRemoveInvalidPrototypeDependentStub
+      4    0.0%    0.0%  v8::internal::Runtime_SetProperty
+      4    0.0%    0.0%  v8::internal::Runtime::GetElementOrCharAt
+      4    0.0%    0.0%  v8::internal::OldSpace::PageAllocationLimit
+      4    0.0%    0.0%  v8::internal::MarkCompactCollector::RelocateObjects
+      4    0.0%    0.0%  v8::internal::KeyedLoadIC_Miss
+      4    0.0%    0.0%  v8::internal::JSObject::AddFastProperty
+      4    0.0%    0.0%  v8::internal::IC::Clear
+      4    0.0%    0.0%  v8::internal::HeapObject::IterateBody
+      4    0.0%    0.0%  v8::internal::Heap::NumberToString
+      4    0.0%    0.0%  v8::internal::DescriptorArray::CopyInsert
+      4    0.0%    0.0%  v8::internal::Assembler::GetCode
+      4    0.0%    0.0%  v8::String::Length
+      4    0.0%    0.0%  _ev_ref
+      4    0.0%    0.0%  __notify_server_register_check
+      4    0.0%    0.0%  _OSAtomicXor32Barrier
+      4    0.0%    0.0%  _OSAtomicOr32Barrier
+      3    0.0%    0.0%  v8::internal::Runtime_PushIfAbsent
+      3    0.0%    0.0%  v8::internal::PagedSpace::RelinkPageListInChunkOrder
+      3    0.0%    0.0%  v8::internal::OldSpace::PutRestOfCurrentPageOnFreeList
+      3    0.0%    0.0%  v8::internal::MarkCompactCollector::ClearNonLiveTransitions
+      3    0.0%    0.0%  v8::internal::MacroAssembler::Move
+      3    0.0%    0.0%  v8::internal::MacroAssembler::Jump
+      3    0.0%    0.0%  v8::internal::LargeObjectSpace::FindChunkContainingPc
+      3    0.0%    0.0%  v8::internal::KeyedLookupCache::Update
+      3    0.0%    0.0%  v8::internal::KeyedLoadIC::UpdateCaches
+      3    0.0%    0.0%  v8::internal::JSObject::SetFastElementsCapacityAndLength
+      3    0.0%    0.0%  v8::internal::Heap::AllocateUninitializedFixedArray
+      3    0.0%    0.0%  v8::internal::FlexibleBodyVisitor<v8::internal::StaticMarkingVisitor, v8::internal::StructBodyDescriptor, void>::Visit
+      3    0.0%    0.0%  v8::internal::FlexibleBodyVisitor<v8::internal::NewSpaceScavenger, v8::internal::FixedArray::BodyDescriptor, int>::Visit
+      3    0.0%    0.0%  v8::internal::Code::Relocate
+      3    0.0%    0.0%  v8::internal::Builtin_HandleApiCallConstruct
+      3    0.0%    0.0%  v8::Value::IsUndefined
+      3    0.0%    0.0%  v8::V8::GlobalizeReference
+      3    0.0%    0.0%  v8::Context::GetCurrent
+      3    0.0%    0.0%  node::WantPollNotifier
+      3    0.0%    0.0%  node::IOWatcher::Start
+      3    0.0%    0.0%  node::Buffer::New
+      3    0.0%    0.0%  _pthread_mutexattr_init
+      3    0.0%    0.0%  _eio_api_destroy
+      3    0.0%    0.0%  _dladdr
+      3    0.0%    0.0%  __keymgr_set_and_unlock_processwide_ptr
+      3    0.0%    0.0%  __dyld_register_func_for_remove_image
+      3    0.0%    0.0%  ___Bfree_D2A
+      2    0.0%    0.0%  v8::internal::Top::UnregisterTryCatchHandler
+      2    0.0%    0.0%  v8::internal::StoreStubCompiler::CompileStoreField
+      2    0.0%    0.0%  v8::internal::StoreIC_Miss
+      2    0.0%    0.0%  v8::internal::SequentialSymbolKey<char>::Hash
+      2    0.0%    0.0%  v8::internal::ScavengeVisitor::VisitPointers
+      2    0.0%    0.0%  v8::internal::ScannerConstants::IsIdentifier
+      2    0.0%    0.0%  v8::internal::Parser::ParseMemberWithNewPrefixesExpression
+      2    0.0%    0.0%  v8::internal::MemoryAllocator::AllocatePages
+      2    0.0%    0.0%  v8::internal::MarkCompactCollector::RelocateOldPointerObject
+      2    0.0%    0.0%  v8::internal::MarkCompactCollector::EncodeForwardingAddressesInNewSpace
+      2    0.0%    0.0%  v8::internal::MacroAssembler::LeaveExitFrameEpilogue
+      2    0.0%    0.0%  v8::internal::LogMessageBuilder::AppendAddress
+      2    0.0%    0.0%  v8::internal::LargeObjectSpace::Contains
+      2    0.0%    0.0%  v8::internal::JavaScriptScanner::ScanIdentifierOrKeyword
+      2    0.0%    0.0%  v8::internal::JSObject::SetElementWithCallbackSetterInPrototypes
+      2    0.0%    0.0%  v8::internal::JSObject::DeleteProperty
+      2    0.0%    0.0%  v8::internal::JSObject::AddProperty
+      2    0.0%    0.0%  v8::internal::Heap::IterateDirtyRegions
+      2    0.0%    0.0%  v8::internal::Heap::GcSafeSizeOfOldObject
+      2    0.0%    0.0%  v8::internal::Heap::CreateFillerObjectAt
+      2    0.0%    0.0%  v8::internal::HandleScope::DeleteExtensions
+      2    0.0%    0.0%  v8::internal::GenerateFastApiCall
+      2    0.0%    0.0%  v8::internal::FlexibleBodyVisitor<v8::internal::StaticMarkingVisitor, v8::internal::JSObject::BodyDescriptor, void>::VisitSpecialized<24>
+      2    0.0%    0.0%  v8::internal::ExternalReference::ExternalReference
+      2    0.0%    0.0%  v8::internal::ExitFrame::GetCallerStackPointer
+      2    0.0%    0.0%  v8::internal::Dictionary<v8::internal::StringDictionaryShape, v8::internal::String*>::AddEntry
+      2    0.0%    0.0%  v8::internal::Dictionary<v8::internal::StringDictionaryShape, v8::internal::String*>::Add
+      2    0.0%    0.0%  v8::internal::Deserializer::ReadChunk
+      2    0.0%    0.0%  v8::internal::Assembler::immediate_arithmetic_op
+      2    0.0%    0.0%  v8::V8::AdjustAmountOfExternalAllocatedMemory
+      2    0.0%    0.0%  v8::TryCatch::HasCaught
+      2    0.0%    0.0%  v8::Context::Global
+      2    0.0%    0.0%  _szone_free_definite_size
+      2    0.0%    0.0%  _strlcpy
+      2    0.0%    0.0%  _pthread_mutexattr_settype
+      2    0.0%    0.0%  _host_get_clock_service
+      2    0.0%    0.0%  _close$NOCANCEL
+      2    0.0%    0.0%  __swrite
+      2    0.0%    0.0%  __dyld_initializer
+      2    0.0%    0.0%  __dispatch_queue_set_width_init
+      2    0.0%    0.0%  _OSAtomicEnqueue
+      1    0.0%    0.0%  v8::preparser::PreParser::ParseIdentifier
+      1    0.0%    0.0%  v8::internal::Zone::DeleteAll
+      1    0.0%    0.0%  v8::internal::Variable::AsSlot
+      1    0.0%    0.0%  v8::internal::UpdatingVisitor::VisitPointer
+      1    0.0%    0.0%  v8::internal::UpdatingVisitor::VisitCodeTarget
+      1    0.0%    0.0%  v8::internal::SymbolTable::LookupKey
+      1    0.0%    0.0%  v8::internal::StubCache::Clear
+      1    0.0%    0.0%  v8::internal::String::WriteToFlat<unsigned short>
+      1    0.0%    0.0%  v8::internal::String::IsEqualTo
+      1    0.0%    0.0%  v8::internal::StoreStubCompiler::GetCode
+      1    0.0%    0.0%  v8::internal::StoreIC::UpdateCaches
+      1    0.0%    0.0%  v8::internal::StoreIC::Store
+      1    0.0%    0.0%  v8::internal::StaticMarkingVisitor::DataObjectVisitor::VisitSpecialized<24>
+      1    0.0%    0.0%  v8::internal::StaticMarkingVisitor::DataObjectVisitor::Visit
+      1    0.0%    0.0%  v8::internal::StackCheckStub::MinorKey
+      1    0.0%    0.0%  v8::internal::Scope::ResolveVariablesRecursively
+      1    0.0%    0.0%  v8::internal::Runtime_QuoteJSONStringComma
+      1    0.0%    0.0%  v8::internal::Runtime_NumberToStringSkipCache
+      1    0.0%    0.0%  v8::internal::Runtime_NumberDiv
+      1    0.0%    0.0%  v8::internal::Runtime::FunctionForId
+      1    0.0%    0.0%  v8::internal::RootMarkingVisitor::VisitPointers
+      1    0.0%    0.0%  v8::internal::Relocatable::Iterate
+      1    0.0%    0.0%  v8::internal::PositionsRecorder::RecordStatementPosition
+      1    0.0%    0.0%  v8::internal::Parser::ParseVariableDeclarations
+      1    0.0%    0.0%  v8::internal::Parser::ParseUnaryExpression
+      1    0.0%    0.0%  v8::internal::Parser::ParsePrimaryExpression
+      1    0.0%    0.0%  v8::internal::Parser::ParseLeftHandSideExpression
+      1    0.0%    0.0%  v8::internal::Parser::ParseAssignmentExpression
+      1    0.0%    0.0%  v8::internal::Parser::NewCompareNode
+      1    0.0%    0.0%  v8::internal::OldSpace::DeallocateBlock
+      1    0.0%    0.0%  v8::internal::OldSpace::AllocateInNextPage
+      1    0.0%    0.0%  v8::internal::NormalizedMapCache::Get
+      1    0.0%    0.0%  v8::internal::MarkCompactCollector::UpdatePointersInOldObject
+      1    0.0%    0.0%  v8::internal::MarkCompactCollector::UpdatePointers
+      1    0.0%    0.0%  v8::internal::MarkCompactCollector::SizeOfMarkedObject
+      1    0.0%    0.0%  v8::internal::MarkCompactCollector::RelocateCodeObject
+      1    0.0%    0.0%  v8::internal::MarkCompactCollector::RelocateCellObject
+      1    0.0%    0.0%  v8::internal::MarkCompactCollector::EncodeForwardingAddressesInPagedSpace<&(v8::internal::MCAllocateFromOldPointerSpace(v8::internal::HeapObject*, int)), &(v8::internal::MarkCompactCollector::ReportDeleteIfNeeded(v8::internal::HeapObject*))>
+      1    0.0%    0.0%  v8::internal::MacroAssembler::TryJumpToExternalReference
+      1    0.0%    0.0%  v8::internal::MacroAssembler::Set
+      1    0.0%    0.0%  v8::internal::MacroAssembler::RecordWriteNonSmi
+      1    0.0%    0.0%  v8::internal::MacroAssembler::InNewSpace<v8::internal::Label>
+      1    0.0%    0.0%  v8::internal::Logger::MoveEventInternal
+      1    0.0%    0.0%  v8::internal::JavaScriptScanner::SkipSingleLineComment
+      1    0.0%    0.0%  v8::internal::JavaScriptScanner::ScanIdentifierSuffix
+      1    0.0%    0.0%  v8::internal::JavaScriptScanner::Next
+      1    0.0%    0.0%  v8::internal::JSObject::DeleteNormalizedProperty
+      1    0.0%    0.0%  v8::internal::JSObject::AddSlowProperty
+      1    0.0%    0.0%  v8::internal::IntToCString
+      1    0.0%    0.0%  v8::internal::Heap::Scavenge
+      1    0.0%    0.0%  v8::internal::Heap::MarkCompact
+      1    0.0%    0.0%  v8::internal::Heap::LookupAsciiSymbol
+      1    0.0%    0.0%  v8::internal::Heap::IteratePointersInDirtyMapsRegion
+      1    0.0%    0.0%  v8::internal::Heap::CommittedMemory
+      1    0.0%    0.0%  v8::internal::Heap::AllocateConsString
+      1    0.0%    0.0%  v8::internal::HashTable<v8::internal::CodeCacheHashTableShape, v8::internal::HashTableKey*>::EnsureCapacity
+      1    0.0%    0.0%  v8::internal::HashMap::Lookup
+      1    0.0%    0.0%  v8::internal::HandleScope::current_next_address
+      1    0.0%    0.0%  v8::internal::GlobalHandles::PostGarbageCollectionProcessing
+      1    0.0%    0.0%  v8::internal::GetTypeRecordingBinaryOpStub
+      1    0.0%    0.0%  v8::internal::FullCodeGenerator::VisitAssignment
+      1    0.0%    0.0%  v8::internal::FullCodeGenerator::SetStatementPosition
+      1    0.0%    0.0%  v8::internal::FullCodeGenerator::PrepareForBailoutForId
+      1    0.0%    0.0%  v8::internal::FullCodeGenerator::PopulateDeoptimizationData
+      1    0.0%    0.0%  v8::internal::FullCodeGenerator::Generate
+      1    0.0%    0.0%  v8::internal::FullCodeGenerator::EmitCallIC
+      1    0.0%    0.0%  v8::internal::FixedSpace::PageAllocationLimit
+      1    0.0%    0.0%  v8::internal::FixedBodyVisitor<v8::internal::StaticMarkingVisitor, v8::internal::FixedBodyDescriptor<8, 16, 16>, void>::Visit
+      1    0.0%    0.0%  v8::internal::FixedBodyVisitor<v8::internal::StaticMarkingVisitor, v8::internal::FixedBodyDescriptor<16, 48, 48>, void>::Visit
+      1    0.0%    0.0%  v8::internal::CallStubCompiler::GetCode
+      1    0.0%    0.0%  v8::internal::CallStubCompiler::CompileArrayPushCall
+      1    0.0%    0.0%  v8::internal::CallOptimization::GetPrototypeDepthOfExpectedType
+      1    0.0%    0.0%  v8::internal::AstOptimizer::VisitIfStatement
+      1    0.0%    0.0%  v8::internal::AstNode::AsEmptyStatement
+      1    0.0%    0.0%  v8::internal::Assembler::testq
+      1    0.0%    0.0%  v8::internal::Assembler::store_rax
+      1    0.0%    0.0%  v8::internal::Assembler::push
+      1    0.0%    0.0%  v8::internal::Assembler::arithmetic_op_32
+      1    0.0%    0.0%  v8::internal::AsciiSymbolKey::IsMatch
+      1    0.0%    0.0%  v8::V8::MakeWeak
+      1    0.0%    0.0%  v8::V8::DisposeGlobal
+      1    0.0%    0.0%  v8::Object::SetPointerInInternalField
+      1    0.0%    0.0%  v8::Object::SetInternalField
+      1    0.0%    0.0%  v8::Integer::NewFromUnsigned
+      1    0.0%    0.0%  node::WrappedScript::CompileRunInThisContext
+      1    0.0%    0.0%  node::DonePollNotifier
+      1    0.0%    0.0%  node::DLOpen
+      1    0.0%    0.0%  node::CheckStatus
+      1    0.0%    0.0%  _thread_info
+      1    0.0%    0.0%  _pthread_mutex_init
+      1    0.0%    0.0%  _mmatcher
+      1    0.0%    0.0%  _ev_unref
+      1    0.0%    0.0%  _ev_idle_stop
+      1    0.0%    0.0%  _dlopen
+      1    0.0%    0.0%  _arc4random
+      1    0.0%    0.0%  ___cxa_atexit
+
+ [GC]:
+   ticks  total  nonlib   name
+   1843    0.2%
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 2.0% are not shown.
+
+   ticks parent  name
+  887570   97.3%  _si_cache_add_item
+

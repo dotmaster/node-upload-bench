@@ -1,0 +1,331 @@
+Sampling process 28202 for 3 seconds with 1 millisecond of run time between samples
+Sampling completed, processing symbols...
+Analysis of sampling node (pid 28202) every 1 millisecond
+Process:         node [28202]
+Path:            /usr/local/bin/node
+Load Address:    0x100000000
+Identifier:      node
+Version:         ??? (???)
+Code Type:       X86-64 (Native)
+Parent Process:  bash [97777]
+
+Date/Time:       2011-03-26 12:57:20.001 +0100
+OS Version:      Mac OS X 10.6.6 (10J567)
+Report Version:  7
+
+Call graph:
+    1593 Thread_3385283   DispatchQueue_1: com.apple.main-thread  (serial)
+      1429 v8::internal::Heap::AllocateSubString(v8::internal::String*, int, int, v8::internal::PretenureFlag)
+        1429 __memcpy
+      153 0x1009a1611
+        153 0x1010617f0
+          153 v8::internal::Invoke(bool, v8::internal::Handle<v8::internal::JSFunction>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Object***, bool*)
+            153 0x105803933
+              153 0x105817b83
+                153 0x10583d319
+                  153 0x105829cc3
+                    153 0x10580dddc
+                      153 0x10581f214
+                        153 0x10580122a
+                          153 0x10589cb33
+                            152 0x10589ce29
+                              150 0x1058002da
+                                150 v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollector)
+                                  150 v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::internal::GCTracer*)
+                                    150 v8::internal::Heap::MarkCompact(v8::internal::GCTracer*)
+                                      146 v8::internal::MarkCompactCollector::CollectGarbage()
+                                        100 v8::internal::MarkCompactCollector::MarkLiveObjects()
+                                          95 v8::internal::MarkCompactCollector::MarkRoots(v8::internal::RootMarkingVisitor*)
+                                            95 v8::internal::Heap::IterateStrongRoots(v8::internal::ObjectVisitor*, v8::internal::VisitMode)
+                                              69 v8::internal::Top::Iterate(v8::internal::ObjectVisitor*, v8::internal::ThreadLocalTop*)
+                                                67 v8::internal::RootMarkingVisitor::VisitPointer(v8::internal::Object**)
+                                                  35 v8::internal::StaticMarkingVisitor::VisitCode(v8::internal::Map*, v8::internal::HeapObject*)
+                                                    23 v8::internal::StaticMarkingVisitor::VisitCode(v8::internal::Map*, v8::internal::HeapObject*)
+                                                    8 v8::internal::RelocIterator::next()
+                                                    2 v8::internal::IC::Clear(unsigned char*)
+                                                    1 v8::internal::CPU::FlushICache(void*, unsigned long)
+                                                    1 v8::internal::RelocIterator::RelocIterator(v8::internal::Code*, int)
+                                                  8 v8::internal::FlexibleBodyVisitor<v8::internal::StaticMarkingVisitor, v8::internal::FixedArray::BodyDescriptor, void>::Visit(v8::internal::Map*, v8::internal::HeapObject*)
+                                                    6 v8::internal::FlexibleBodyVisitor<v8::internal::StaticMarkingVisitor, v8::internal::FixedArray::BodyDescriptor, void>::Visit(v8::internal::Map*, v8::internal::HeapObject*)
+                                                    2 v8::internal::StaticMarkingVisitor::VisitUnmarkedObjects(v8::internal::Object**, v8::internal::Object**)
+                                                  6 v8::internal::StaticMarkingVisitor::VisitJSFunctionFields(v8::internal::Map*, v8::internal::JSFunction*, bool)
+                                                  5 v8::internal::StaticMarkingVisitor::VisitSharedFunctionInfoGeneric(v8::internal::Map*, v8::internal::HeapObject*)
+                                                    4 v8::internal::StaticMarkingVisitor::VisitSharedFunctionInfoGeneric(v8::internal::Map*, v8::internal::HeapObject*)
+                                                    1 v8::internal::MarkCompactCollector::MarkUnmarkedObject(v8::internal::HeapObject*)
+                                                  4 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                    4 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                      3 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                        3 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                          2 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                            1 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                            1 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                              1 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                                1 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                                  1 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                                    1 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                                      1 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                                        1 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                                          1 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                                            1 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                                              1 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                                                1 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                                                  1 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                                                    1 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                                                      1 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                                                        1 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                          1 v8::internal::MarkCompactCollector::MarkUnmarkedObject(v8::internal::HeapObject*)
+                                                      1 v8::internal::MarkCompactCollector::MarkDescriptorArray(v8::internal::DescriptorArray*)
+                                                  3 v8::internal::FixedBodyVisitor<v8::internal::StaticMarkingVisitor, v8::internal::FixedBodyDescriptor<24, 40, 40>, void>::Visit(v8::internal::Map*, v8::internal::HeapObject*)
+                                                  3 v8::internal::FlexibleBodyVisitor<v8::internal::StaticMarkingVisitor, v8::internal::JSObject::BodyDescriptor, void>::Visit(v8::internal::Map*, v8::internal::HeapObject*)
+                                                    3 v8::internal::StaticMarkingVisitor::VisitUnmarkedObjects(v8::internal::Object**, v8::internal::Object**)
+                                                      2 v8::internal::FlexibleBodyVisitor<v8::internal::StaticMarkingVisitor, v8::internal::FixedArray::BodyDescriptor, void>::Visit(v8::internal::Map*, v8::internal::HeapObject*)
+                                                        2 v8::internal::StaticMarkingVisitor::VisitUnmarkedObjects(v8::internal::Object**, v8::internal::Object**)
+                                                      1 v8::internal::StaticMarkingVisitor::VisitCode(v8::internal::Map*, v8::internal::HeapObject*)
+                                                  1 v8::internal::MarkCompactCollector::MarkUnmarkedObject(v8::internal::HeapObject*)
+                                                  1 v8::internal::RootMarkingVisitor::VisitPointer(v8::internal::Object**)
+                                                  1 v8::internal::StaticMarkingVisitor::DataObjectVisitor::Visit(v8::internal::Map*, v8::internal::HeapObject*)
+                                                1 v8::internal::JavaScriptFrame::Iterate(v8::internal::ObjectVisitor*) const
+                                                  1 v8::internal::StandardFrame::IterateExpressions(v8::internal::ObjectVisitor*) const
+                                                    1 v8::internal::RootMarkingVisitor::VisitPointers(v8::internal::Object**, v8::internal::Object**)
+                                                      1 v8::internal::FlexibleBodyVisitor<v8::internal::StaticMarkingVisitor, v8::internal::FixedArray::BodyDescriptor, void>::Visit(v8::internal::Map*, v8::internal::HeapObject*)
+                                                1 v8::internal::StaticMarkingVisitor::VisitSharedFunctionInfoGeneric(v8::internal::Map*, v8::internal::HeapObject*)
+                                              16 v8::internal::GlobalHandles::IterateStrongRoots(v8::internal::ObjectVisitor*)
+                                                16 v8::internal::RootMarkingVisitor::VisitPointer(v8::internal::Object**)
+                                                  7 v8::internal::StaticMarkingVisitor::VisitCode(v8::internal::Map*, v8::internal::HeapObject*)
+                                                    5 v8::internal::StaticMarkingVisitor::VisitCode(v8::internal::Map*, v8::internal::HeapObject*)
+                                                    1 v8::internal::IC::Clear(unsigned char*)
+                                                    1 v8::internal::RelocIterator::RelocIterator(v8::internal::Code*, int)
+                                                  2 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                    1 v8::internal::MarkCompactCollector::MarkDescriptorArray(v8::internal::DescriptorArray*)
+                                                    1 v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+                                                      1 v8::internal::MarkCompactCollector::MarkDescriptorArray(v8::internal::DescriptorArray*)
+                                                  2 v8::internal::StaticMarkingVisitor::VisitJSFunctionFields(v8::internal::Map*, v8::internal::JSFunction*, bool)
+                                                  1 v8::internal::FlexibleBodyVisitor<v8::internal::StaticMarkingVisitor, v8::internal::FixedArray::BodyDescriptor, void>::Visit(v8::internal::Map*, v8::internal::HeapObject*)
+                                                  1 v8::internal::FlexibleBodyVisitor<v8::internal::StaticMarkingVisitor, v8::internal::JSObject::BodyDescriptor, void>::Visit(v8::internal::Map*, v8::internal::HeapObject*)
+                                                    1 v8::internal::StaticMarkingVisitor::VisitUnmarkedObjects(v8::internal::Object**, v8::internal::Object**)
+                                                      1 v8::internal::FlexibleBodyVisitor<v8::internal::StaticMarkingVisitor, v8::internal::FixedArray::BodyDescriptor, void>::Visit(v8::internal::Map*, v8::internal::HeapObject*)
+                                                        1 v8::internal::StaticMarkingVisitor::VisitUnmarkedObjects(v8::internal::Object**, v8::internal::Object**)
+                                                          1 v8::internal::MarkCompactCollector::MarkUnmarkedObject(v8::internal::HeapObject*)
+                                                  1 v8::internal::MarkCompactCollector::MarkUnmarkedObject(v8::internal::HeapObject*)
+                                                  1 v8::internal::RootMarkingVisitor::VisitPointer(v8::internal::Object**)
+                                                  1 v8::internal::StaticMarkingVisitor::VisitSharedFunctionInfoGeneric(v8::internal::Map*, v8::internal::HeapObject*)
+                                              9 v8::internal::RootMarkingVisitor::VisitPointers(v8::internal::Object**, v8::internal::Object**)
+                                                9 v8::internal::FlexibleBodyVisitor<v8::internal::StaticMarkingVisitor, v8::internal::FixedArray::BodyDescriptor, void>::Visit(v8::internal::Map*, v8::internal::HeapObject*)
+                                                  9 v8::internal::StaticMarkingVisitor::VisitUnmarkedObjects(v8::internal::Object**, v8::internal::Object**)
+                                                    6 v8::internal::StaticMarkingVisitor::VisitCode(v8::internal::Map*, v8::internal::HeapObject*)
+                                                      3 v8::internal::StaticMarkingVisitor::VisitCode(v8::internal::Map*, v8::internal::HeapObject*)
+                                                      2 v8::internal::RelocIterator::RelocIterator(v8::internal::Code*, int)
+                                                      1 v8::internal::CPU::FlushICache(void*, unsigned long)
+                                                    3 v8::internal::StaticMarkingVisitor::VisitUnmarkedObjects(v8::internal::Object**, v8::internal::Object**)
+                                              1 v8::internal::Top::Iterate(v8::internal::ObjectVisitor*)
+                                          4 v8::internal::SymbolTableCleaner::VisitPointers(v8::internal::Object**, v8::internal::Object**)
+                                          1 v8::internal::StackGuard::EnableInterrupts()
+                                            1 pthread_mutex_lock
+                                        35 v8::internal::LargeObjectSpace::FreeUnmarkedObjects()
+                                          35 v8::internal::MemoryAllocator::FreeRawMemory(void*, unsigned long, v8::internal::Executability)
+                                            35 munmap
+                                        8 v8::internal::MarkCompactCollector::SweepSpaces()
+                                          6 v8::internal::SweepSpace(v8::internal::PagedSpace*)
+                                            3 v8::internal::SweepSpace(v8::internal::PagedSpace*)
+                                            1 v8::internal::FixedSpace::DeallocateBlock(unsigned char*, int, bool)
+                                            1 v8::internal::OldSpace::DeallocateBlock(unsigned char*, int, bool)
+                                            1 v8::internal::OldSpace::PageAllocationLimit(v8::internal::Page*)
+                                          1 v8::internal::Heap::IterateDirtyRegions(v8::internal::PagedSpace*, bool (*)(unsigned char*, unsigned char*, void (*)(v8::internal::HeapObject**)), void (*)(v8::internal::HeapObject**), v8::internal::Heap::ExpectedPageWatermarkState)
+                                          1 v8::internal::LargeObjectSpace::IterateDirtyRegions(void (*)(v8::internal::HeapObject**))
+                                        2 v8::internal::MarkCompactCollector::Finish()
+                                          2 v8::internal::StubCache::Clear()
+                                        1 v8::internal::MarkCompactCollector::ClearNonLiveTransitions()
+                                      4 v8::internal::MarkCompactCollector::Prepare(v8::internal::GCTracer*)
+                                        4 v8::internal::MarkCompactCollector::CreateBackPointers()
+                                          4 v8::internal::Map::CreateBackPointers()
+                              2 0x1058002e2
+                                2 v8::internal::Heap::AllocateSubString(v8::internal::String*, int, int, v8::internal::PretenureFlag)
+                                  2 v8::internal::LargeObjectSpace::AllocateRawInternal(int, int, v8::internal::Executability)
+                                    2 v8::internal::LargeObjectChunk::New(int, v8::internal::Executability)
+                                      1 v8::internal::LargeObjectChunk::New(int, v8::internal::Executability)
+                                      1 v8::internal::MemoryAllocator::AllocateRawMemory(unsigned long, unsigned long*, v8::internal::Executability)
+                                        1 v8::internal::OS::Allocate(unsigned long, unsigned long*, bool)
+                                          1 __mmap
+                            1 0x1058002fc
+      3 0x90c307894810c083
+        2 v8::internal::SymbolTableCleaner::~SymbolTableCleaner()
+          2 0x100000000
+            2 v8::internal::MarkCompactCollector::MarkLiveObjects()
+        1 v8::internal::RootMarkingVisitor::~RootMarkingVisitor()
+          1 0x1009bc000
+            1 v8::internal::StackFrame::GetCallerState(v8::internal::StackFrame::State*) const
+      2 0x105818021
+        2 0x1010617f0
+          2 v8::internal::Invoke(bool, v8::internal::Handle<v8::internal::JSFunction>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Object***, bool*)
+            2 0x105803933
+              2 0x105817b83
+                2 0x10583d319
+                  2 0x105829cc3
+                    2 0x10580dddc
+                      2 0x10581f228
+                        2 0x10580479a
+                          2 0x10580024a
+                            2 v8::internal::CallIC_Miss(v8::internal::Arguments)
+                              2 v8::internal::CallICBase::LoadFunction(v8::internal::InlineCacheState, int, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::String>)
+      1 0x1007800f1
+        1 0x1010617f0
+          1 v8::internal::Invoke(bool, v8::internal::Handle<v8::internal::JSFunction>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Object***, bool*)
+            1 0x105803933
+              1 0x105817b83
+                1 0x10583d319
+                  1 0x105829cc3
+                    1 0x10580dddc
+                      1 0x10581f250
+                        1 0x10580024a
+                          1 v8::internal::KeyedLoadIC_Miss(v8::internal::Arguments)
+                            1 v8::internal::KeyedLoadIC::Load(v8::internal::InlineCacheState, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>)
+                              1 v8::internal::StubCache::ComputeKeyedLoadSpecialized(v8::internal::JSObject*)
+                                1 v8::internal::CodeCache::Update(v8::internal::String*, v8::internal::Code*)
+                                  1 v8::internal::CodeCacheHashTable::Put(v8::internal::String*, v8::internal::Code*)
+                                    1 v8::internal::Heap::AllocateFixedArray(int)
+                                      1 v8::internal::Heap::AllocateRawFixedArray(int)
+      1 0x100983701
+        1 0x1010617f0
+          1 v8::internal::Invoke(bool, v8::internal::Handle<v8::internal::JSFunction>, v8::internal::Handle<v8::internal::Object>, int, v8::internal::Object***, bool*)
+            1 0x105803933
+              1 0x105817b83
+                1 0x10583d319
+                  1 0x105829cc3
+                    1 0x10580dddc
+                      1 0x10581f679
+                        1 0x10580122a
+                          1 0x10589d0b9
+                            1 0x10589dc9c
+                              1 0x10589e903
+      1 0x10105f838ba4900
+        1 0x100001000
+          1 void v8::internal::MacroAssembler::InNewSpace<v8::internal::Label>(v8::internal::Register, v8::internal::Register, v8::internal::Condition, v8::internal::Label*)
+      1 DYLD-STUB$$getpagesize
+      1 v8::internal::RelocIterator::next()
+      1 v8::internal::StubCache::ComputeCallConstant(int, v8::internal::InLoopFlag, v8::internal::Code::Kind, int, v8::internal::String*, v8::internal::Object*, v8::internal::JSObject*, v8::internal::JSFunction*)
+        1 szone_free_definite_size
+    1593 Thread_3385284
+      1593 thread_start
+        1593 _pthread_start
+          1593 etp_proc
+            1593 _pthread_cond_wait
+              1593 __semwait_signal
+
+Total number in stack (recursive counted multiple, when >=5):
+        22       v8::internal::MarkCompactCollector::MarkMapContents(v8::internal::Map*)
+        6       v8::internal::FlexibleBodyVisitor<v8::internal::StaticMarkingVisitor, v8::internal::FixedArray::BodyDescriptor, void>::Visit(v8::internal::Map*, v8::internal::HeapObject*)
+        6       v8::internal::StaticMarkingVisitor::VisitUnmarkedObjects(v8::internal::Object**, v8::internal::Object**)
+        5       v8::internal::MarkCompactCollector::MarkUnmarkedObject(v8::internal::HeapObject*)
+
+Sort by top of stack, same collapsed (when >= 5):
+        __semwait_signal        1593
+        __memcpy        1429
+        munmap        35
+        v8::internal::StaticMarkingVisitor::VisitCode(v8::internal::Map*, v8::internal::HeapObject*)        32
+        v8::internal::RelocIterator::next()        9
+        v8::internal::FlexibleBodyVisitor<v8::internal::StaticMarkingVisitor, v8::internal::FixedArray::BodyDescriptor, void>::Visit(v8::internal::Map*, v8::internal::HeapObject*)        8
+        v8::internal::StaticMarkingVisitor::VisitJSFunctionFields(v8::internal::Map*, v8::internal::JSFunction*, bool)        8
+        v8::internal::StaticMarkingVisitor::VisitUnmarkedObjects(v8::internal::Object**, v8::internal::Object**)        7
+        v8::internal::StaticMarkingVisitor::VisitSharedFunctionInfoGeneric(v8::internal::Map*, v8::internal::HeapObject*)        6
+        v8::internal::MarkCompactCollector::MarkUnmarkedObject(v8::internal::HeapObject*)        5
+
+Binary Images:
+       0x100000000 -        0x10049efe7 +node (??? - ???) <3271C335-7DC5-32B6-87CF-6A06CFA452F8> /usr/local/bin/node
+       0x1006d0000 -        0x1006d4fff  libutil.dylib (??? - ???) <0A8C53EF-7F3B-293F-7684-7E8AA2EE0E2A> /usr/lib/libutil.dylib
+    0x7fff5fc00000 -     0x7fff5fc3bdef  dyld (132.1 - ???) <486E6C61-1197-CC7C-2197-82CE505102D7> /usr/lib/dyld
+    0x7fff80da1000 -     0x7fff80db6ff7  com.apple.LangAnalysis (1.6.6 - 1.6.6) <1AE1FE8F-2204-4410-C94E-0E93B003BEDA> /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/LangAnalysis
+    0x7fff80e1a000 -     0x7fff80e3dfff  com.apple.opencl (12.3 - 12.3) <D30A45FC-4520-45AF-3CA5-092313DB5D54> /System/Library/Frameworks/OpenCL.framework/Versions/A/OpenCL
+    0x7fff80e46000 -     0x7fff80e49ff7  com.apple.securityhi (4.0 - 36638) <87868A3E-9341-1078-F00C-5E5972F01A4A> /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SecurityHI.framework/Versions/A/SecurityHI
+    0x7fff80e4a000 -     0x7fff80e91ff7  com.apple.coreui (2 - 114) <923E33CC-83FC-7D35-5603-FB8F348EE34B> /System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/CoreUI
+    0x7fff810ce000 -     0x7fff810d9ff7  com.apple.speech.recognition.framework (3.11.1 - 3.11.1) <3D65E89B-FFC6-4AAF-D5CC-104F967C8131> /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SpeechRecognition.framework/Versions/A/SpeechRecognition
+    0x7fff8120e000 -     0x7fff81239ff7  libxslt.1.dylib (3.24.0 - compatibility 3.0.0) <87A0B228-B24A-C426-C3FB-B40D7258DD49> /usr/lib/libxslt.1.dylib
+    0x7fff81250000 -     0x7fff81305fe7  com.apple.ink.framework (1.3.3 - 107) <8C36373C-5473-3A6A-4972-BC29D504250F> /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Ink.framework/Versions/A/Ink
+    0x7fff81318000 -     0x7fff81318ff7  com.apple.CoreServices (44 - 44) <DC7400FB-851E-7B8A-5BF6-6F50094302FB> /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+    0x7fff81584000 -     0x7fff81584ff7  com.apple.vecLib (3.6 - vecLib 3.6) <96FB6BAD-5568-C4E0-6FA7-02791A58B584> /System/Library/Frameworks/vecLib.framework/Versions/A/vecLib
+    0x7fff8176f000 -     0x7fff8176fff7  com.apple.Accelerate (1.6 - Accelerate 1.6) <15DF8B4A-96B2-CB4E-368D-DEC7DF6B62BB> /System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate
+    0x7fff81770000 -     0x7fff81784ff7  com.apple.speech.synthesis.framework (3.10.35 - 3.10.35) <63C87CF7-56B3-4038-8136-8C26E96AD42F> /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis
+    0x7fff81999000 -     0x7fff81a17fff  com.apple.CoreText (3.5.0 - ???) <4D5C7932-293B-17FF-7309-B580BB1953EA> /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreText.framework/Versions/A/CoreText
+    0x7fff81b5f000 -     0x7fff81b65ff7  com.apple.DiskArbitration (2.3 - 2.3) <857F6E43-1EF4-7D53-351B-10DE0A8F992A> /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+    0x7fff81c73000 -     0x7fff81c89fff  com.apple.ImageCapture (6.0.1 - 6.0.1) <09ABF2E9-D110-71A9-4A6F-8A61B683E936> /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/ImageCapture.framework/Versions/A/ImageCapture
+    0x7fff81cf6000 -     0x7fff81d27fff  libGLImage.dylib (??? - ???) <1A8E58CF-FA2F-14F7-A097-D34EEA8A7D03> /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLImage.dylib
+    0x7fff81d28000 -     0x7fff81d2afff  com.apple.print.framework.Print (6.1 - 237.1) <CA8564FB-B366-7413-B12E-9892DA3C6157> /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Print.framework/Versions/A/Print
+    0x7fff81db5000 -     0x7fff81e1ffe7  libvMisc.dylib (268.0.1 - compatibility 1.0.0) <AF0EA96D-000F-8C12-B952-CB7E00566E08> /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvMisc.dylib
+    0x7fff81e20000 -     0x7fff81e61fff  com.apple.SystemConfiguration (1.10.5 - 1.10.2) <FB39F09C-57BB-D8CC-348D-93E00C602F7D> /System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration
+    0x7fff81ed7000 -     0x7fff81ed9fff  libRadiance.dylib (??? - ???) <6C974488-62D2-71BA-A45E-C764A0AF7354> /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libRadiance.dylib
+    0x7fff81f10000 -     0x7fff8271afe7  libBLAS.dylib (219.0.0 - compatibility 1.0.0) <EEE5CE62-9155-6559-2AEA-05CED0F5B0F1> /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+    0x7fff8279c000 -     0x7fff82821ff7  com.apple.print.framework.PrintCore (6.3 - 312.7) <CDFE82DD-D811-A091-179F-6E76069B432D> /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore
+    0x7fff82e4f000 -     0x7fff82e5efff  com.apple.NetFS (3.2.1 - 3.2.1) <E5D33870-27D2-E50B-9B35-16AA50369733> /System/Library/Frameworks/NetFS.framework/Versions/A/NetFS
+    0x7fff82e5f000 -     0x7fff82e9afff  com.apple.AE (496.4 - 496.4) <55AAD5CA-7160-7899-1C68-562ED8160DF7> /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+    0x7fff82e9b000 -     0x7fff82ea0fff  libGFXShared.dylib (??? - ???) <991F8197-FD06-2AF1-F99B-E448ED4FB2AC> /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGFXShared.dylib
+    0x7fff82ea2000 -     0x7fff82eecff7  com.apple.Metadata (10.6.3 - 507.15) <5170FCE0-ED6C-2E3E-AB28-1DDE3F628FC5> /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+    0x7fff82eed000 -     0x7fff82efffe7  libsasl2.2.dylib (3.15.0 - compatibility 3.0.0) <76B83C8D-8EFE-4467-0F75-275648AFED97> /usr/lib/libsasl2.2.dylib
+    0x7fff82f00000 -     0x7fff82f11ff7  libz.1.dylib (1.2.3 - compatibility 1.0.0) <97019C74-161A-3488-41EC-A6CA8738418C> /usr/lib/libz.1.dylib
+    0x7fff82f12000 -     0x7fff82f28fef  libbsm.0.dylib (??? - ???) <83676D2E-23CD-45CD-BE5C-35FCFFBBBDBB> /usr/lib/libbsm.0.dylib
+    0x7fff82f29000 -     0x7fff82f2efff  libGIF.dylib (??? - ???) <A7BF2D68-F489-720C-E5A9-DC2B24DC5A21> /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libGIF.dylib
+    0x7fff82f2f000 -     0x7fff82f3dff7  libkxld.dylib (??? - ???) <27713C39-0E51-8F5A-877B-C5539C96A520> /usr/lib/system/libkxld.dylib
+    0x7fff833b8000 -     0x7fff833f9fef  com.apple.QD (3.36 - ???) <5DC41E81-32C9-65B2-5528-B33E934D5BB4> /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+    0x7fff833fa000 -     0x7fff8341fff7  com.apple.CoreVideo (1.6.2 - 45.6) <E138C8E7-3CB6-55A9-0A2C-B73FE63EA288> /System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+    0x7fff8358a000 -     0x7fff835a5ff7  com.apple.openscripting (1.3.1 - ???) <9D50701D-54AC-405B-CC65-026FCB28258B> /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/OpenScripting.framework/Versions/A/OpenScripting
+    0x7fff835ea000 -     0x7fff8369ffe7  com.apple.ColorSync (4.6.3 - 4.6.3) <5A7360A8-D495-1E8D-C4B4-A363AF989ADE> /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+    0x7fff836a0000 -     0x7fff83857fef  com.apple.ImageIO.framework (3.0.4 - 3.0.4) <EE9DFBD6-6354-7C5A-F4C7-5FF782A7D992> /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/ImageIO
+    0x7fff83858000 -     0x7fff83867fff  com.apple.opengl (1.6.12 - 1.6.12) <DE3F0528-7759-CDFD-A2CF-C51D3C9C8B39> /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
+    0x7fff83868000 -     0x7fff838b1fef  libGLU.dylib (??? - ???) <CCE779A9-2467-A5AA-A558-691E43A1105F> /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib
+    0x7fff83a0b000 -     0x7fff83a31fe7  libJPEG.dylib (??? - ???) <DFA5DAC2-D1C6-D5ED-F95D-AC185E98B6E7> /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libJPEG.dylib
+    0x7fff83a32000 -     0x7fff83aaffef  libstdc++.6.dylib (7.9.0 - compatibility 7.0.0) <35ECA411-2C08-FD7D-11B1-1B7A04921A5C> /usr/lib/libstdc++.6.dylib
+    0x7fff83aed000 -     0x7fff83b15fff  com.apple.DictionaryServices (1.1.2 - 1.1.2) <E9269069-93FA-2B71-F9BA-FDDD23C4A65E> /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices
+    0x7fff83b24000 -     0x7fff83f68fef  libLAPACK.dylib (219.0.0 - compatibility 1.0.0) <E14EC4C6-B055-A4AC-B971-42AB644E4A7C> /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+    0x7fff83f69000 -     0x7fff83f86ff7  libPng.dylib (??? - ???) <667C3883-32A5-CCCC-8624-972B5DFD8EA4> /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libPng.dylib
+    0x7fff83fd7000 -     0x7fff8414efe7  com.apple.CoreFoundation (6.6.4 - 550.42) <770C572A-CF70-168F-F43C-242B9114FCB5> /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+    0x7fff84154000 -     0x7fff84174ff7  com.apple.DirectoryService.Framework (3.6 - 621.9) <E7AFAAFA-8221-585B-85D0-171ADC490825> /System/Library/Frameworks/DirectoryService.framework/Versions/A/DirectoryService
+    0x7fff84175000 -     0x7fff841caff7  com.apple.framework.familycontrols (2.0.2 - 2020) <A3CFF697-B9DB-A7E5-3B39-9DA9B34F0595> /System/Library/PrivateFrameworks/FamilyControls.framework/Versions/A/FamilyControls
+    0x7fff842db000 -     0x7fff8432afef  libTIFF.dylib (??? - ???) <176B52ED-4F6C-D0C2-EABC-C032BFC3DFAA> /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libTIFF.dylib
+    0x7fff8435e000 -     0x7fff84438ff7  com.apple.vImage (4.0 - 4.0) <354F34BF-B221-A3C9-2CA7-9BE5E14AD5AD> /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage
+    0x7fff84486000 -     0x7fff844d5ff7  com.apple.DirectoryService.PasswordServerFramework (6.0 - 6.0) <17EFD646-6F53-36E9-56BF-5A339E83EFFC> /System/Library/PrivateFrameworks/PasswordServer.framework/Versions/A/PasswordServer
+    0x7fff8478d000 -     0x7fff8481dfff  com.apple.SearchKit (1.3.0 - 1.3.0) <3403E658-A54E-A79A-12EB-E090E8743984> /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit
+    0x7fff84a0e000 -     0x7fff84abdfff  edu.mit.Kerberos (6.5.10 - 6.5.10) <6A159CD8-5C02-4528-C36F-6AFBFD61576B> /System/Library/Frameworks/Kerberos.framework/Versions/A/Kerberos
+    0x7fff85002000 -     0x7fff85003ff7  com.apple.audio.units.AudioUnit (1.6.5 - 1.6.5) <14F14B5E-9287-BC36-0C3F-6592E6696CD4> /System/Library/Frameworks/AudioUnit.framework/Versions/A/AudioUnit
+    0x7fff85004000 -     0x7fff8570106f  com.apple.CoreGraphics (1.545.0 - ???) <356D59D6-1DD1-8BFF-F9B3-1CE51D2F1EC7> /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
+    0x7fff8582b000 -     0x7fff858cbfff  com.apple.LaunchServices (362.2 - 362.2) <A8EDC37C-1D40-5ED0-49BE-90EF110A6B3A> /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+    0x7fff858cc000 -     0x7fff858edfff  libresolv.9.dylib (41.0.0 - compatibility 1.0.0) <9F322F47-0584-CB7D-5B73-9EBD670851CD> /usr/lib/libresolv.9.dylib
+    0x7fff858ee000 -     0x7fff85902fff  libGL.dylib (??? - ???) <1EB1BD0F-C17F-55DF-B8B4-8E9CF99359D4> /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
+    0x7fff85903000 -     0x7fff85963fe7  com.apple.framework.IOKit (2.0 - ???) <D107CB8A-5182-3AC4-35D0-07068A695C05> /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+    0x7fff85a1b000 -     0x7fff85a54fef  libcups.2.dylib (2.8.0 - compatibility 2.0.0) <561D0DCB-47AD-A12C-9066-70E4CBAD331C> /usr/lib/libcups.2.dylib
+    0x7fff85abe000 -     0x7fff85e5bfe7  com.apple.QuartzCore (1.6.3 - 227.34) <C4AABD56-8C93-BAD0-4B27-7E9A2F0EAEE4> /System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+    0x7fff85e5c000 -     0x7fff85f2efe7  com.apple.CFNetwork (454.11.5 - 454.11.5) <5D68598D-C138-C8B6-B6AC-B1F48B01E021> /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CFNetwork.framework/Versions/A/CFNetwork
+    0x7fff85f2f000 -     0x7fff85f35ff7  com.apple.CommerceCore (1.0 - 6) <E8A1144C-5666-9840-4729-256FE69CDBDB> /System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Frameworks/CommerceCore.framework/Versions/A/CommerceCore
+    0x7fff85f3d000 -     0x7fff85f40ff7  libCoreVMClient.dylib (??? - ???) <609598E6-195D-E5D4-3B92-AE8D9768829C> /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreVMClient.dylib
+    0x7fff85f41000 -     0x7fff85ffeff7  com.apple.CoreServices.OSServices (357 - 357) <7B22626F-D544-1955-CC53-240F4CACEB4A> /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+    0x7fff85fff000 -     0x7fff86282ff7  com.apple.Foundation (6.6.4 - 751.42) <AF1E3050-3503-8714-8274-EA6BD6BE8A22> /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+    0x7fff86283000 -     0x7fff86302fe7  com.apple.audio.CoreAudio (3.2.6 - 3.2.6) <6D8AD3F7-409D-512C-C5BE-66C64D1B8F3E> /System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio
+    0x7fff86326000 -     0x7fff86360fff  libssl.0.9.8.dylib (0.9.8 - compatibility 0.9.8) <C7153747-50E3-32DA-426F-CC4C505D1D6C> /usr/lib/libssl.0.9.8.dylib
+    0x7fff86d58000 -     0x7fff86d5dff7  com.apple.CommonPanels (1.2.4 - 91) <4D84803B-BD06-D80E-15AE-EFBE43F93605> /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/CommonPanels.framework/Versions/A/CommonPanels
+    0x7fff86d5e000 -     0x7fff86e84fff  com.apple.audio.toolbox.AudioToolbox (1.6.5 - 1.6.5) <B51023BB-A5C9-3C65-268B-6B86B901BB2C> /System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
+    0x7fff86ec5000 -     0x7fff86fdefef  libGLProgrammability.dylib (??? - ???) <4F2DC233-7DD2-1204-CAA5-3E6524F0AB75> /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLProgrammability.dylib
+    0x7fff87071000 -     0x7fff87156fef  com.apple.DesktopServices (1.5.9 - 1.5.9) <27890B2C-0CD2-7C27-9D0C-D5952C5E8438> /System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv
+    0x7fff87157000 -     0x7fff87170fff  com.apple.CFOpenDirectory (10.6 - 10.6) <CCF79716-7CC6-2520-C6EB-A4F56AD0A207> /System/Library/Frameworks/OpenDirectory.framework/Versions/A/Frameworks/CFOpenDirectory.framework/Versions/A/CFOpenDirectory
+    0x7fff87171000 -     0x7fff871fdfef  SecurityFoundation (??? - ???) <F43FDB02-CAA5-F8FF-C8D7-6665E7403ECE> /System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation
+    0x7fff87246000 -     0x7fff8724aff7  libmathCommon.A.dylib (315.0.0 - compatibility 1.0.0) <95718673-FEEE-B6ED-B127-BCDBDB60D4E5> /usr/lib/system/libmathCommon.A.dylib
+    0x7fff872c8000 -     0x7fff873dffef  libxml2.2.dylib (10.3.0 - compatibility 10.0.0) <B2FB9DA8-6EC9-FFBC-C919-C022B9CBEB73> /usr/lib/libxml2.2.dylib
+    0x7fff8745e000 -     0x7fff8761cfff  libicucore.A.dylib (40.0.0 - compatibility 1.0.0) <781E7B63-2AD0-E9BA-927C-4521DB616D02> /usr/lib/libicucore.A.dylib
+    0x7fff876e5000 -     0x7fff87a19fff  com.apple.CoreServices.CarbonCore (861.23 - 861.23) <96465459-6536-3FD7-7504-B59D0390EEC5> /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+    0x7fff87a1c000 -     0x7fff87ca2fff  com.apple.security (6.1.1 - 37594) <1B4E1ABD-1BB3-DA49-F574-0EEB23E73C6A> /System/Library/Frameworks/Security.framework/Versions/A/Security
+    0x7fff87ca3000 -     0x7fff87dc4fe7  libcrypto.0.9.8.dylib (0.9.8 - compatibility 0.9.8) <48AEAFE1-21F4-B3C8-4199-35AD5E8D0613> /usr/lib/libcrypto.0.9.8.dylib
+    0x7fff87dc5000 -     0x7fff87f86fff  libSystem.B.dylib (125.2.1 - compatibility 1.0.0) <F00A8B2F-84A0-0868-1047-3A13F9114864> /usr/lib/libSystem.B.dylib
+    0x7fff87fd5000 -     0x7fff88021fff  libauto.dylib (??? - ???) <F7221B46-DC4F-3153-CE61-7F52C8C293CF> /usr/lib/libauto.dylib
+    0x7fff88022000 -     0x7fff88025fff  com.apple.help (1.3.1 - 41) <E311A81E-9870-A430-1E16-AFF6C92CE6E5> /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Help.framework/Versions/A/Help
+    0x7fff88180000 -     0x7fff88180ff7  com.apple.Accelerate.vecLib (3.6 - vecLib 3.6) <4CCE5D69-F1B3-8FD3-1483-E0271DB2CCF3> /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib
+    0x7fff8838c000 -     0x7fff8838cff7  com.apple.Carbon (150 - 152) <191B4F4B-8D06-796B-CA0C-782F06DD7BC7> /System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
+    0x7fff8838d000 -     0x7fff883a3fe7  com.apple.MultitouchSupport.framework (207.10 - 207.10) <458F0259-6EDC-16BA-E6AA-1CEED002D188> /System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/A/MultitouchSupport
+    0x7fff883a4000 -     0x7fff8843efff  com.apple.ApplicationServices.ATS (4.4 - ???) <395849EE-244A-7323-6CBA-E71E3B722984> /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+    0x7fff88615000 -     0x7fff88667ff7  com.apple.HIServices (1.8.2 - ???) <7C91D07D-FA20-0882-632F-0CAE4FAC2B79> /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+    0x7fff88668000 -     0x7fff88669ff7  com.apple.TrustEvaluationAgent (1.1 - 1) <5952A9FA-BC2B-16EF-91A7-43902A5C07B6> /System/Library/PrivateFrameworks/TrustEvaluationAgent.framework/Versions/A/TrustEvaluationAgent
+    0x7fff8866a000 -     0x7fff88670ff7  IOSurface (??? - ???) <EAD87C9F-BADC-7116-4ADD-0B0679459D24> /System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface
+    0x7fff886c5000 -     0x7fff8877bfff  libobjc.A.dylib (227.0.0 - compatibility 1.0.0) <99CB3A0F-64CF-1D16-70CD-8AED2EF06C30> /usr/lib/libobjc.A.dylib
+    0x7fff8877c000 -     0x7fff8883dfe7  libFontParser.dylib (??? - ???) <8B12D37E-3A95-5A73-509C-3AA991E0C546> /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/libFontParser.dylib
+    0x7fff88854000 -     0x7fff88854ff7  com.apple.ApplicationServices (38 - 38) <10A0B9E9-4988-03D4-FC56-DDE231A02C63> /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
+    0x7fff88855000 -     0x7fff8885cfff  com.apple.OpenDirectory (10.6 - 10.6) <4200CFB0-DBA1-62B8-7C7C-91446D89551F> /System/Library/Frameworks/OpenDirectory.framework/Versions/A/OpenDirectory
+    0x7fff8885d000 -     0x7fff888a5ff7  libvDSP.dylib (268.0.1 - compatibility 1.0.0) <98FC4457-F405-0262-00F7-56119CA107B6> /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvDSP.dylib
+    0x7fff88bea000 -     0x7fff88ee8fe7  com.apple.HIToolbox (1.6.4 - ???) <263AD497-F4CC-9610-E7D3-B95CF6F02030> /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+    0x7fff890ca000 -     0x7fff89183fff  libsqlite3.dylib (9.6.0 - compatibility 9.0.0) <2C5ED312-E646-9ADE-73A9-6199A2A43150> /usr/lib/libsqlite3.dylib
+    0x7fffffe00000 -     0x7fffffe01fff  libSystem.B.dylib (??? - ???) <F00A8B2F-84A0-0868-1047-3A13F9114864> /usr/lib/libSystem.B.dylib
+Sample analysis of process 28202 written to file /dev/stdout
